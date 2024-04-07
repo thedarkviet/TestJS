@@ -25,14 +25,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>Test Java Plugin Webpage</h1>
-        <p>This is a basic webpage with a space for a Java applet.</p>
+        <h1>Test Canvas Applet Webpage</h1>
+
+            <canvas id="myCanvas" width="300" height="200"></canvas>
+            <script>
+                // Get the canvas element
+                var canvas = document.getElementById("myCanvas");
+                var ctx = canvas.getContext("2d");
         
-        <div class="applet-container">
-            <p>Your Java applet will be placed here.</p>
-            <!-- You can embed your Java applet here -->
-            <!-- Example: <applet code="YourApplet.class" width="300" height="200"></applet> -->
-        </div>
-    </div>
+                // Draw "Hello, World!" text on the canvas
+                ctx.font = "20px Arial";
+                ctx.fillStyle = "blue";
+                ctx.fillText("Hello, World!", 50, 50);
+            </script>
 </body>
 </html>
